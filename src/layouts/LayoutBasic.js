@@ -1,25 +1,34 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
 
 export default function LayoutBasic(props) {
 	const { routes } = props;
-	const { Header, Content, Footer } = Layout;
-	console.log(props);
+	const { Content, Footer } = Layout;
 	return (
 		<Layout>
-			<h3>Menu Basic</h3>
+			<h2>Menu...</h2>
+			<Layout>
+				<Content>
+					<LoadRouters routes={routes} />
+				</Content>
+				<Footer>Gerardo Villegas 2020</Footer>
+			</Layout>
 		</Layout>
 	);
 }
 
 function LoadRouters({ routes }) {
-	return routes.map((route, index) => (
-		<Route
-			key={index}
-			path={route.path}
-			exact={route.exact}
-			component={route.component}
-		/>
-	));
+	return (
+		<Switch>
+			{routes.map((route, index) => (
+				<Route
+					key={index}
+					path={route.path}
+					exact={route.exact}
+					component={route.component}
+				/>
+			))}{' '}
+		</Switch>
+	);
 }
