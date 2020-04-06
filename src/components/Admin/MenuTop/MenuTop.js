@@ -4,7 +4,8 @@ import { Layout, Button, Icon } from 'antd';
 
 import './MenuTop.scss';
 
-export default function MenuTop() {
+export default function MenuTop(props) {
+	const { menuCollapsed, setMenuCollapsed } = props;
 	return (
 		<div className="menu-top">
 			<div className="menu-top__left">
@@ -13,8 +14,8 @@ export default function MenuTop() {
 					src={GeraLogo}
 					alt="Gerardo Villegas"
 				/>
-				<Button type="link" onClick={() => console.log('Clic')}>
-					<Icon type="menu-fold" />
+				<Button type="link" onClick={() => setMenuCollapsed(!menuCollapsed)}>
+					<Icon type={menuCollapsed ? 'menu-unfold' : 'menu-fold'} />
 				</Button>
 			</div>
 			<div className="menu-top__right">
