@@ -10,7 +10,7 @@ export default function LayoutBasic(props) {
 			<h2>Menu...</h2>
 			<Layout>
 				<Content>
-					<LoadRouters routes={routes} />
+					<LoadRoutes routes={routes} />
 				</Content>
 				<Footer>Gerardo Villegas 2020</Footer>
 			</Layout>
@@ -18,7 +18,7 @@ export default function LayoutBasic(props) {
 	);
 }
 
-function LoadRouters({ routes }) {
+function LoadRoutes({ routes }) {
 	return (
 		<Switch>
 			{routes.map((route, index) => (

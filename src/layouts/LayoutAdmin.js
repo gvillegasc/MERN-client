@@ -14,7 +14,7 @@ export default function LayoutAdmin(props) {
 			<Layout>
 				<Header>Header</Header>
 				<Content>
-					<LoadRouters routes={routes} />
+					<LoadRoutes routes={routes} />
 				</Content>
 				<Footer>Gerardo Villegas 2020</Footer>
 			</Layout>
@@ -22,7 +22,7 @@ export default function LayoutAdmin(props) {
 	);
 }
 
-function LoadRouters({ routes }) {
+function LoadRoutes({ routes }) {
 	return (
 		<Switch>
 			{routes.map((route, index) => (
