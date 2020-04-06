@@ -30,6 +30,11 @@ const routes = [
 				exact: true,
 			},
 			{
+				path: '/admin/menu-web',
+				component: AdminSignIn,
+				exact: true,
+			},
+			{
 				component: Error404,
 			},
 		],

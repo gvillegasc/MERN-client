@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Layout, LocaleProvider } from 'antd';
+import { Layout, LocaleProvider, Menu } from 'antd';
 import MenuTop from '../components/Admin/MenuTop/MenuTop';
+import MenuSider from '../components/Admin/MenuSider/MenuSider';
 
 import './LayoutAdmin.scss';
 
@@ -11,7 +12,7 @@ export default function LayoutAdmin(props) {
 	console.log(props);
 	return (
 		<Layout>
-			{/* TODO: Menu Sider */}
+			<MenuSider />
 			<Layout className="layout-admin">
 				<Header className="layout-admin__header">
 					<MenuTop />
